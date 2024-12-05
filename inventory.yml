@@ -1,0 +1,15 @@
+ungrouped:
+  hosts:
+    dockerhost:
+      ansible_host: <CHANGE THIS AS PER ENVIRONMENT>
+      ansible_user: root
+  vars:
+      ansible_ssh_pass: <CHANGE THIS AS PER ENVIRONMENT>
+      ansible_become_pass: <CHANGE THIS AS PER ENVIRONMENT>
+
+
+
+
+
+
+  

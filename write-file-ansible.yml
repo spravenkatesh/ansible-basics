@@ -1,0 +1,11 @@
+---
+- name: Write a simple file
+  hosts: dockerhost
+  gather_facts: false
+  tasks:
+    - name: Write file test.txt to temp directory
+      ansible.builtin.lineinfile:
+        path: /tmp/test.txt
+        line: "just a quick and simple test."
+        mode: "755"
+        create: true

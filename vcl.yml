@@ -1,0 +1,17 @@
+---
+- name: Variables, Conditionals and Loops
+  hosts: dockerhost
+  gather_facts: false
+  vars:
+    nums:
+      - 1
+      - 10
+      - 20
+      - 25
+      - 30
+  tasks:
+    - name: Display numbers greater than 10
+      when: item > 10
+      ansible.builtin.debug:
+        msg: "{{ item }}"
+      loop: "{{ nums }}"
